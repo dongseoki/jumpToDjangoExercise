@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Question
-# from .models import *
+# from .models import Question
+from .models import *
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -10,4 +10,4 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question)
-# admin.site.register(Answer)
+admin.site.register(Answer)
