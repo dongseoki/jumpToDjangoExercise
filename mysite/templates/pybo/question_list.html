@@ -1,5 +1,9 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+{#{% load static %}#}
+{#<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">#}
+
+{% extends 'base.html' %}
+{% block content %}
+
 {#{% if question_list %}#}
 {#    <ul>#}
 {#    {% for question in question_list %}#}
@@ -37,3 +41,4 @@
         </tbody>
     </table>
 </div>
+{% endblock %}
