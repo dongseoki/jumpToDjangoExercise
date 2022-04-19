@@ -409,3 +409,5 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,pycharm,visualstudiocode,python,jupyternotebooks,django
 
+# grep console ignore.
+mysite/.idea/GrepConsole.xml
