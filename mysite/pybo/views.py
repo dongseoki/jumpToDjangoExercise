@@ -1,10 +1,13 @@
+import json
+
 from django.shortcuts import render
 
 # Create your views here.
 
-from django.http import HttpResponseNotAllowed
+from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.core import serializers
 from .models import Question, Answer
 from .forms import QuestionForm, AnswerForm
 from  django.core.paginator import Paginator
@@ -20,6 +23,16 @@ def index(request):
     page_obj = paginator.get_page(page)
     context = {'question_list': page_obj}
     return render(request, 'pybo/question_list.html', context)
+
+def jsontest(request):
+    question_list = Question.objects.order_by('-create_date')[:3]
+    # question_list = Question.objects.order_by('-create_date')
+    # context = {'question_list': question_list}
+    question_list = list(question_list.values('subject', 'content', 'create_date'))
+    # for question in question_list:
+    #     question['create_date']=str(question['create_date'])
+    question_list = serializers.serialize('json', question_list, fields=('subject', 'content', 'create_date'))
+    return HttpResponse(json.dumps(question_list), content_type="application/json")
 
 def detail(request, question_id):
     # question = Question.objects.get(id=question_id)
@@ -65,3 +78,7 @@ def question_create(request):
         form = QuestionForm()
     context = {'form': form}
     return render(request, 'pybo/question_form.html', context)
+
+
+def home_page(request):
+    return HttpResponse('<html><title>To-Do lists</title></html>')
