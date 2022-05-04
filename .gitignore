@@ -411,3 +411,7 @@ $RECYCLE.BIN/
 
 # grep console ignore.
 mysite/.idea/GrepConsole.xml
+
+
+# pem file
+*.pem
