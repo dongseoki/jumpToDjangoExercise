@@ -53,7 +53,7 @@ DEBUG = True
 #      }
 #  }
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.39.142.146']
 
 
 # Application definition
