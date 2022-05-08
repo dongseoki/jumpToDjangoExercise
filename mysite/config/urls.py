@@ -29,3 +29,5 @@ if settings.DEBUG:
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
     ]
+
+handler404 = 'common.views.page_not_found'
