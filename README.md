@@ -112,13 +112,13 @@
             - DEBUG true일 경우 debug_toolbar 확인.
             - handler404 설정.
     - pybo
-        - forms
-        - models
-        - admin
-        - tests
-        - urls
-        - migrations
-        - templatetags
+        - forms.py : api 에서 post 로 전달받은 데이터를 특정 형태로 가공하거나, 템플릿에서 form을 구성할때 사용하기도 함.
+        - models.py : Django ORM 관련된 설정. 이 설정으로 테이블이 생성됨. M:N이면 관계 테이블이 생성되기도 함.
+        - admin.py : 어드민 페이지를 구성할 떄 사용되는 파일.
+        - tests.py : app을 테스트하기 위해 사용되는 코드. 파일이나 폴더 형태 가능.
+        - urls.py : 특정 URL 패턴을 어떤 뷰파일의 어떤 함수와 연결할지 매핑함.
+        - migrations : makeMigration 명령어 수행시, 만들어지는 파일들을 저장해두는 폴더
+        - templatetags : 파이보 서비스에서 사용할 커스텀 필터들을 명시해둔 파일들을 저장한 폴더.
     - common
         - pybo와 유사 하여 생략
     - static
