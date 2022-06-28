@@ -35,11 +35,11 @@
                 - /etc/systemd/system/mysite.service
                     - gunicorn 서비스 프로그램 실행 관련 내용 확인 가능.
                 - 관련 중요 명령어.
-                    
+
                     ```python
                     sudo systemctl restart mysite.service
                     ```
-                    
+
             - nginx
                 - 웹서버 역할
                 - 파이보 서비스에 대한 Nginx의 설정파일을 다음과 같이 관리자 권한으로 작성한다.
@@ -48,16 +48,15 @@
                     - nginx 실행 관련 중요한 설정들이 있다.
                         - ex)
                             - ssl 설정
-                            - favicon 위치?
                             - 듣고 있는 포트.
-                            - static 이 들어간 경로는 특정 경로에서 가져와라!
-                            - 그게 아니면 gunicorn을 이용해라_!
+                            - static 이 들어간 경로명시.
+                            - 그게 아니면 gunicorn을 이용해
                 - nginx 서비스 실행 관련 중요 명령어
-                    
+
                     ```python
                     sudo systemctl restart nginx
                     ```
-                    
+
     - Cloud(AWS lightsail)
         - instance
             - Ubuntu
@@ -146,5 +145,5 @@
             - 위에서 만든 코드를 이용하여 관련 테이블 생성 또는 수정.
     </div>
     </details>
-    
+
 
